@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="Dk">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,57 +7,54 @@
     <title>Exam1Project</title>
     <link rel="stylesheet" href="HP1.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <script scr="responsivemenu"></script>
+    <script src="https://kit.fontawesome.com/546789d2ca.js" crossorigin="anonymous"></script>
+    <script src="responsivemenu.js" defer></script>
    </head>
 <body>
    <div class="Wrapper">
       <!-- Nav bar -->
-      <nav class="main-nav">
+      <nav class="navbar">
          <img src="Img/PlaceHolderLogo.png" alt="">
+         <!-- <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a> -->
+         <div class="navbar-links">
          <ul>
             <li><a href="Homepage.html">Forside</a></li>
             <li><a href="UnderPage1.html">information</a></li>
             <li><a href="UnderPage2.html">Om Os</a></li>
             <li><a href="UnderPage3.html">at være patientet</a></li>
          </ul>
+      </div>
       </nav>
 <!-- Top container -->
 <section class="top-container">
-   <header class="showcase">
+   <header class="picture">
       <a href="Homepage.html" class="btn">Log ind for selv-service</a>
    </header>
-   </div>
-</section>
+   </section>
 
 <!-- box section with link to other section -->
 <section class="boxes">
-   <!-- <div class="box">
-         <a href="Link der ikke virker">
-         <h1>Nye bruger</h1>
-         <i class="fa-solid fa-user"></i> Icon that are being used -->
-         <!-- <p class="More info">Her kan du oprettet dig som en ny bruger</p>
-         </a>
-         </div> -->
-         <div class="box">
-         <a href="Link der ikke virker">
-         <h1>Lokation</h1>
-         <i class="fa-solid fa-user"></i> <!-- Icon that are being used-->
-         <p class="More info">Her kan du oprettet dig som en ny bruger</p>
+         <div class="box-a">
+         <a href="UnderPage1.html">
+         <p class="H-p">Lokation</p>
+         <i class="fa-solid fa-location-dot fa-5x"></i><!-- Icon that are being used-->
          </a>
          </div>
-         <div class="box">
-         <a href="Link der ikke virker">
-         <h1>Kontakt os</h1>
-         <i class="fa-solid fa-user"></i> <!-- Icon that are being used-->
-         <p class="More info">Her kan du oprettet dig som en ny bruger</p>
+         <div class="box-b">
+         <a href="UnderPage2.html">
+         <p class="H-p">Kontakt os</p>
+         <i class="fa-solid fa-address-book fa-5x"></i> <!-- Icon that are being used-->
          </a>
          </div>
 </section>
 <section class="boxess">
    <div class="boxx">
-         <h4>Welkomme til RiingsKøbs Lægehuse </h4>
-         <p>Her på Riings lægehus,dig velkommen til vores
+         <p class="H-p">Velkomme til Riings Lægehuse </p>
+         <p>Her på Riings lægehus, byder vidig velkommen til vores
             lægehus. Hvor vi kan Tilbyde diverse forskellige 
             Muligheder for  Behandligner. Såsom, Vacationer, 
             allagiundersøgelse, graviditetundersøgelser og mange andre 
@@ -65,7 +62,7 @@
             </p>
          </div>
          <div class="boxxx">
-            <h5> Åbnings tider</h5>
+            <p class="H-p"> Åbnings tider</p>
             <ul>
                <li>Mandag	08.00-16.00</li>
                <li>Tirsdag	08.00-16.00</li>
@@ -77,10 +74,8 @@
             </ul>
          </div>        
 </section>
-<footer>
-   <div class="footer">
+<footer class="footer">
 <p>dette site har kun til undervisnings formål</p>
-</div>
 </footer>
    </div>
    <!-- wrapper code ends here  -->

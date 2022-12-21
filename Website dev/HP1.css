@@ -15,46 +15,58 @@ html { /* pretty much define how the whole html doc should react, in the border,
 body{
     background: #ffffff;
     margin: 0px 0px;
-    line-height: 1.2;
+    line-height: 1.2; 
+    
 }
-
+/* our button*/
 .btn{
     background: var(--dark);
     color: var(--light);
     padding: 1rem 2rem;
     text-decoration: none;
+    padding: left;
     border: 0;
     font-size: 40px;
-    /* float: right; */
+    
     
     
     
 }
-
+/* make sure the picture their is use is scale 100% from the orignale so i don't look awfull*/
 img{
     max-width: 100%;
 }
+/* Making sure that css know we are working in grid for the whole html, When we wrapper everything this document. so each item can move around in this*/
 .wrapper {
     display: grid;
     grid-gap:0 ;
 }
 
 /* nav*/
+/* Making so our logo is at the top at the page*/
 nav img{
     display: block;
   margin-left: auto;
   margin-right: auto;
 }
-.main-nav ul {
+.navbar-links {
+    height: 100%;
+}
+/* setting how many columns that should be in line.*/
+.navbar-links ul {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 5px;
     padding: 0;
     list-style: none;
     grid-template-columns: repeat(4,1fr);
 }
 
-.main-nav a{
-    background: var(--primary);
+.navbar-links li {
+    list-style: none;
+}
+/* Setting the ankers tags defition so it don't show it's blue outline **/
+.navbar-links a{
+   background: var(--primary);
     display: block;
     text-decoration: none;
     padding: 1rem;
@@ -65,7 +77,8 @@ nav img{
     box-shadow: var(--shadow);
 }
 
-.main-nav a:hover {
+/* making it changes color when mouse course moves ontop the objetive*/
+.navbar a:hover {
     background: var(--dark);
     color: var(--light);
 }
@@ -73,35 +86,38 @@ nav img{
 .toggle-button {
     position: absolute;
     top: .75rem;
-    right: 1rem ;
+    right: 1rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 21px;
-
 }
 
-.toggle-button .bar{
+.toggle-button .bar {
     height: 3px;
     width: 100%;
-    background-color: var(--primary);
+    background-color: var(--light);
     border-radius: 10px;
 }
 
+.H-p{
+    font-size: 1.7rem;
+}
 
 /* topcointer container*/
 
+/* the whole topcatainer is maaking my own layout as I fit with grids*/
 .top-container {
     display: grid;
     grid-gap: 20px;
     grid-template-areas:
-    'showcase'
+    'picture picture'
 }
 
-/* showcase*/
-.showcase {
-    grid-area: showcase;
+/* Picture for the container and also making use of flex box so the button can be move around in verticale line */
+.picture {
+    grid-area: picture;
     min-height: 400px;
     background:url(img/HomepageDoctor.jpg) ;
     background-size: cover;
@@ -114,27 +130,47 @@ nav img{
     box-shadow: var();
 }
 /* section 1 */
+/* grid for the box below the picture, box-a and box-b is define since should be easy move it around in if it need to be*/
+section a{
+    text-decoration: none;
+}
 .boxes{
 display: grid;
-grid-gap: 60px;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-gap: 5px;
+grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+margin: 0px;
+position: top;
+text-decoration: none;
 }
 
-.box{
+.box-a{
     background: var(--primary);
     text-align: center;
     padding: 1.5rem 2rem;
     box-shadow: var(--shadow);
+    text-decoration: none;
+    color: var(--dark);
     
 }
 
+.box-b{
+    background: var(--primary);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: var(--dark);
+    
+}
 /* Section 2 */
 
 .boxess{
-    display: grid;
-grid-gap: 20px;
+display: grid;
+grid-gap: 5px;
 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-margin: 60px;
+margin: 0;
+text-decoration: none;
+        list-style-type: none;
     }
     .boxx{
         background: var(--primary);
@@ -142,51 +178,159 @@ margin: 60px;
         padding: 1.5rem 2rem;
         box-shadow: var(--shadow);
         text-decoration: none;
+        font-size: 1.2rem;
     }
     .boxxx{
         background: var(--primary);
         text-align: center;
-        padding: 1.5rem 2rem;
+        padding: .5rem 2rem;
         box-shadow: var(--shadow);
-        text-decoration: none;
+        font-size: 1.2rem;
+          
     }
 
-.welcome-box{
+/* .welcome-box{
         grid-area: welcome-box;
         min-height: 200px;
         background:var(--primary);
         display:flex;
         flex-direction: column;
-        box-shadow: var(--shadow);
-}
+        box-shadow: var(--shadow); */
+
 .footer{
     text-align: center;
-    background: var(--light);
+    background: var(--dark);
+    color: var(--light);
+    padding: 40px;
   }
+
 /* Media Queries */
+/* define how the content should react when on different device*/
 @media (max-width: 700px) {
     .top-container {
       grid-template-areas:
-        'showcase'
+        'picture'
     }
   
-    .main-nav ul {
+    .navbar-links ul {
       grid-template-columns: 1fr;
+        display: grid;
+        grid-gap: 0px;
+        padding: 0;
+        list-style: none;
     }
-  
+    
+    /* section 1 */
+.boxes{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    text-decoration: none;
+    }
+    .box-a{
+        background: var(--primary);
+        text-align: center;
+        padding: 1.5rem 2rem;
+        box-shadow: var(--shadow);
+        text-decoration: none;
+        
+    }
+    
+    .box-b{
+        background: var(--primary);
+        text-align: center;
+        padding: 1.5rem 2rem;
+        box-shadow: var(--shadow);
+        text-decoration: none;
+        
+    }
+    /* Section 2 */
+    .boxess{
+        display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    margin: 0px;
+        }
+        .boxx{
+            background: var(--primary);
+            text-align: left;
+            padding: 1.5rem 2rem;
+            box-shadow: var(--shadow);
+            text-decoration: none;
+        }
+        .boxxx{
+            background: var(--primary);
+            text-align: center;
+            padding: .5rem 2rem;
+            box-shadow: var(--shadow);
+            text-decoration: none;
+        }
+
     .btn {
-      display: block;
-      text-align: center;
-      margin: auto;
+        display: block;
+        text-align: center;
+        margin: auto;
+      }
     }
-  }
+    .toggle-button {
+        display: flex;
+    }
   
   @media (max-width: 500px) {
     .top-container {
       grid-template-areas:
-        'showcase'
+        'picture'
     }
-  }
+    .navbar-links ul {
+        grid-template-columns: 1fr;
+          display: grid;
+          grid-gap: 0px;
+          padding: 0;
+          list-style: none;
+      }
+      /* Section 1 */
+      .boxes{
+        display: grid;
+        grid-gap: 0px;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        }
+        .box-a{
+            background: var(--primary);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            box-shadow: var(--shadow);
+            
+        }
+        
+        .box-b{
+            background: var(--primary);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            box-shadow: var(--shadow);
+            
+        }
+        /* Section 2 */
+        .boxess{
+            display: grid;
+        grid-gap: 0px;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        margin: 0px;
+            }
+            .boxx{
+                background: var(--primary);
+                text-align: left;
+                padding: 1.5rem 2rem;
+                box-shadow: var(--shadow);
+                text-decoration: none;
+            }
+            .boxxx{
+                background: var(--primary);
+                text-align: center;
+                padding: .5rem 2rem;
+                box-shadow: var(--shadow);
+                text-decoration: none;
+            }
+      }
 
 
 
